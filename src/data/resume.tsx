@@ -75,6 +75,7 @@ export const DATA = {
       href: "",
       badges: ["Tech Head"],
       location: "Mumbai, Maharashtra",
+      logoUrl: "",
       title: "Tech Head",
       start: "July 2024",
       end: "Present",

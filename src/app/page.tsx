@@ -164,7 +164,7 @@ export default function Page() {
                   I like building things
                 </h2>
                 <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  As a university student, I've participated in {" "}
+                  As a university student, I have participated in {" "}
                   {DATA.hackathons.length}+ hackathons. People from around the
                   country would come together and build incredible things in 1-2
                   days. It was eye-opening to see the endless possibilities
