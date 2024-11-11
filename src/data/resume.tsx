@@ -301,5 +301,35 @@ export const DATA = {
         },
       ]
     },
+    {
+      title: "PlayCraft (Game Development Hackathon)",
+      dates: "7 Nov 2024 - 11 Nov 2024",
+      location: "IIT BBS (Online)",
+      description:
+        "Developed a 2.5D platformer, 9 - 5, capturing the day-in-the-life of a college student, integrating relatable tasks, social interactions, and a unique blend of 2D/3D visual design to create an immersive, culturally resonant experience.",
+      image: "https://d8it4huxumps7.cloudfront.net/uploads/images/150x150/uploadedManual-672a00a90014f_neuro_logo.jpg",
+      links: [
+        {
+          title: "Github",
+          icon: <Icons.github className="h-4 w-4" />,
+          href: "https://github.com/altf4-games/Nine_To_Five",
+        },
+      ]
+    },
+    {
+      title: "Cyberguard AI Hackathon",
+      dates: "22 Nov 2024 - 8 Dec 2024",
+      location: "IndiaAI (Online)",
+      description:
+        "Co-developed Sentinel, an AI-driven platform for automated cybercrime report classification, integrating NLP and OCR to efficiently detect and categorize threats, sensitive data, and cyber patterns.",
+      image: "https://indiaai.gov.in/indiaAi-2021/build/images/header/logo.svg",
+      links: [
+        {
+          title: "Github",
+          icon: <Icons.github className="h-4 w-4" />,
+          href: "https://github.com/altf4-games/Sentinel",
+        },
+      ]
+    },
   ],
 } as const;
