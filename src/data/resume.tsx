@@ -331,5 +331,24 @@ export const DATA = {
         },
       ]
     },
+    {
+      title: "I ❤️ Hackathon: Pune Web3 Edition",
+      dates: "21 Dec 2024 - 22 Dec 2024",
+      location : "VIT Pune",
+      description: "Co-developed Voyage3, an innovative Web3 travel solution, which secured a Top 10 finish. The solution integrates blockchain-powered bookings for secure, transparent transactions, NFT tickets for seamless ownership and resale, on-chain AI agents for autonomous, personalized flight bookings, and crypto & fiat payment options for ultimate flexibility.",
+      image: "https://d8it4huxumps7.cloudfront.net/uploads/images/150x150/673dd7d8b3969_organisation_image-XYyI3zwhj11998269297HpsbMdbV0F.png", 
+      links: [
+        {
+          title: "Github",
+          icon: <Icons.github className="h-4 w-4" />,
+          href: "https://github.com/altf4-games/I-Hackathon",
+        },
+        {
+          title: "Site",
+          icon: <Icons.globe className="h-4 w-4" />,
+          href: "https://voyage3.vercel.app/",
+        },
+      ]
+    }
   ],
 } as const;
