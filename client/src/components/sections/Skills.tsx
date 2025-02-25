@@ -5,11 +5,11 @@ import { useState } from "react";
 // Skills organized by category
 const skillsByCategory = {
   "Frontend": {
-    level: 60,
+    level: 70,
     skills: ["HTML", "CSS", "React", "Next.js", "Tailwind CSS", "Three.js"]
   },
   "Backend": {
-    level: 60, 
+    level: 65, 
     skills: ["Node.js", "Express.js", "MongoDB", "Firebase"]
   },
   "AI/ML": {
@@ -21,11 +21,11 @@ const skillsByCategory = {
     skills: ["Unity", "Unreal Engine", "C#", "C++"]
   },
   "Blockchain": {
-    level: 69, // mid
+    level: 65, // mid
     skills: ["Solidity", "Web3.js", "Ethereum", "Smart Contracts"]
   },
   "Data Structures & Algorithms": {
-    level: 69, // good
+    level: 65, // good
     skills: ["C++", "Java", "Python", "Problem Solving"]
   }
 };
