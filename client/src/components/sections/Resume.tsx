@@ -9,7 +9,7 @@ export default function Resume() {
   const [isHovering, setIsHovering] = useState(false);
   
   return (
-    <section id="resume" className="py-24 bg-gradient-to-b from-background to-accent/10">
+    <section id="resume" className="py-24 bg-gradient-to-b from-background to-accent/10 justify-center items-center flex">
       <div className="container px-4 md:px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

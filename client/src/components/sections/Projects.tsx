@@ -138,7 +138,7 @@ export default function Projects() {
   };
 
   return (
-    <section id="projects" className="py-24 bg-accent">
+    <section id="projects" className="py-24 bg-accent justify-center items-center flex">
       <div className="container px-4 md:px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

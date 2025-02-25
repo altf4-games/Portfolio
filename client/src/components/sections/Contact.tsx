@@ -5,7 +5,7 @@ import { SiLinkedin, SiGithub, SiYoutube } from "react-icons/si";
 
 export default function Contact() {
   return (
-    <section id="contact" className="py-16 bg-accent">
+    <section id="contact" className="py-16 bg-accent justify-center items-center flex">
       <div className="container px-4 md:px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

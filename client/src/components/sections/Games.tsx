@@ -119,7 +119,7 @@ const games = [
 
 export default function Games() {
   return (
-    <section id="games" className="py-16 bg-background">
+    <section id="games" className="py-16 bg-background justify-center items-center flex">
       <div className="container px-4 md:px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

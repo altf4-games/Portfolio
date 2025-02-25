@@ -43,7 +43,7 @@ export default function Skills() {
   const [hoveredCategory, setHoveredCategory] = useState(null);
 
   return (
-    <section id="skills" className="py-20 bg-gradient-to-b from-accent/80 to-background">
+    <section id="skills" className="py-20 bg-gradient-to-b from-accent/80 to-background justify-center items-center flex">
       <div className="container px-4 md:px-6 max-w-4xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

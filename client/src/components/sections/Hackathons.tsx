@@ -77,7 +77,8 @@ const HackathonCard: React.FC<HackathonCardProps> = ({
               <ChevronRight className="w-5 h-5 text-primary" />
             </motion.div>
           </div>
-          <CardDescription className="space-y-2">
+          {/* Replaced CardDescription with a div */}
+          <div className="space-y-2">
             <div className="flex items-center gap-2">
               <Calendar className="w-4 h-4 text-muted-foreground" />
               <span className="text-sm">{hackathon.date}</span>
@@ -86,8 +87,9 @@ const HackathonCard: React.FC<HackathonCardProps> = ({
               <MapPin className="w-4 h-4 text-muted-foreground" />
               <Badge variant="secondary">{hackathon.location}</Badge>
             </div>
-          </CardDescription>
+          </div>
         </CardHeader>
+
         <AnimatePresence>
           {isExpanded && (
             <motion.div
@@ -294,7 +296,7 @@ export default function Hackathons(): JSX.Element {
   const flattenedHackathons = years.flatMap(year => hackathonsByYear[year]);
 
   return (
-    <section id="hackathons" className="py-16 bg-gradient-to-b from-background to-accent/30">
+    <section id="hackathons" className="py-16 bg-gradient-to-b from-background to-accent/30 justify-center items-center flex">
       <div className="container px-4 md:px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
