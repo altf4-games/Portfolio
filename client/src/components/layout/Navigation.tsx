@@ -15,9 +15,9 @@ export default function Navigation() {
       transition={{ duration: 0.6 }}
     >
       <div className="container flex h-16 items-center justify-between">
-        <a href="/">
+        {/* <a href="/">
           <span className="font-bold text-xl cursor-pointer ml-6">Your Logo</span>
-        </a>
+        </a> */}
 
         {/* Hamburger Icon (Visible only on mobile) */}
         <div className="md:hidden flex items-center mr-5">
