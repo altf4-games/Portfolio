@@ -259,6 +259,27 @@ const hackathons: Hackathon[] = [
       site: 'https://voyage3.vercel.app/',
     },
   },
+  {
+    name: "Datathon 2025: AdFlow AI",
+    date: "15 Feb 2025 - 16 Feb 2025",
+    location: "KJSCE",
+    description: "Developed AdFlow AI, a comprehensive marketing platform featuring A/B testing, automated uploads to Twitter and Bluesky, KPI tracking, and AI-generated marketing post summaries.",
+    links: 
+    {
+      github: "https://github.com/altf4-games/Datathon25",
+    }
+    
+  },
+  {
+    name: "IDEA Hackathon: Catch Phish",
+    date: "17 March 2025 - 18 March 2025",
+    location: "KJSCE",
+    description: "Developed Catch Phish, a one-stop solution to combat phishing sites. Built an AI engine to extract key features and generate phishing confidence scores, and created a browser add-on to block phishing sites on startup.",
+    links: 
+    {
+      github: "https://github.com/altf4-games/CatchPhish",
+    }
+  }
 ];
 
 export default function Hackathons(): JSX.Element {
