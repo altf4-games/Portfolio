@@ -279,6 +279,15 @@ const hackathons: Hackathon[] = [
     {
       github: "https://github.com/altf4-games/CatchPhish",
     }
+  },
+  {
+    name: "Hack 8",
+    date: "12 April 2025 - 13 April 2025",
+    location: "KJSSE",
+    description: "Built LearnIt.ai, a comprehensive edtech platform featuring AI-powered flashcards, revision material, Unity-based virtual labs, AR games, and interactive courses. Secured a top 6 position.",
+    links: {
+      github: "https://github.com/altf4-games/Hack8"
+    }
   }
 ];
 
