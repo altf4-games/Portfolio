@@ -5,13 +5,8 @@ import { Trophy } from "lucide-react";
 const achievements = [
   {
     title: "Game Developer",
-    description: "Developed 20+ unique games with 150k+ downloads",
+    description: "Developed 20+ unique games with 150k+ downloads and 750+ followers",
     icon: "🎮"
-  },
-  {
-    title: "Community Builder",
-    description: "Built a dedicated community of 750+ followers",
-    icon: "👥"
   },
   {
     title: "Hackathon Veteran",
@@ -21,6 +16,16 @@ const achievements = [
   {
     title: "Top 10 Finalist",
     description: "Top 10 Finalist at I ❤️ Hackathon for building Voyage3",
+    icon: "🌟"
+  },
+  {
+    title: "Top 6 Finish",
+    description: "Finished Top 6 at KJSSE Hack 8",
+    icon: "🏆"
+  },
+  {
+    title: "Top 40 Finalist",
+    description: "Top 40 Finalist at IDEA Hackathon 2025",
     icon: "🌟"
   },
   {
