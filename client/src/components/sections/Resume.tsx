@@ -5,7 +5,7 @@ import { FileText, Download, Eye, ArrowRight } from "lucide-react";
 import { useState } from "react";
 
 export default function Resume() {
-  const resumeUrl = "https://drive.google.com/file/d/1valbEvMoWT1diaBkZegIQq8JXbNfKb5X/preview";
+  const resumeUrl = "https://drive.google.com/file/d/1f3AbhJoUWFZPyEZKIEnu9T22OSvgkt7k/preview";
   const [isHovering, setIsHovering] = useState(false);
   
   return (
