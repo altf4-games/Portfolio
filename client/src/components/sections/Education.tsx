@@ -19,6 +19,7 @@ export default function Education() {
             </CardHeader>
             <CardContent>
               <p>B.Tech in Computer Engineering</p>
+              <p className="text-sm text-muted-foreground mt-2">CGPA: 9.50</p>
             </CardContent>
           </Card>
         </motion.div>
