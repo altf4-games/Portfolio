@@ -303,7 +303,7 @@ const hackathons: Hackathon[] = [
 
 export default function Hackathons(): JSX.Element {
   const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
-  const [activeYear, setActiveYear] = useState<string>('2024');
+  const [activeYear, setActiveYear] = useState<string>('2025');
   const timelineRef = useRef<HTMLDivElement>(null);
   const [isScrolling, setIsScrolling] = useState(false);
 
@@ -332,8 +332,8 @@ export default function Hackathons(): JSX.Element {
   //   }
   // }, [activeYear, isScrolling]);
 
-  // Flatten hackathons for easier indexing
-  const flattenedHackathons = years.flatMap(year => hackathonsByYear[year]);
+  // Flatten hackathons for easier indexing - only for active year
+  const flattenedHackathons = hackathonsByYear[activeYear] || [];
 
   return (
     <section id="hackathons" className="py-16 bg-gradient-to-b from-background to-accent/30 justify-center items-center flex">
@@ -375,54 +375,51 @@ export default function Hackathons(): JSX.Element {
           {/* Timeline Line */}
           <div className="absolute left-1/2 top-0 bottom-0 w-1 bg-primary/30 transform -translate-x-1/2 rounded-full" />
 
-          {/* Year Markers on Timeline */}
+          {/* Year Marker */}
           <div className="relative" ref={timelineRef}>
-            {years.map((year, yearIndex) => (
-              <div key={year} className="mb-16">
-                {/* Year Marker */}
-                <div 
-                  id={`year-marker-${year}`} 
-                  className="flex justify-center items-center relative mb-8"
-                >
-                  <div className="absolute left-1/2 transform -translate-x-1/2 bg-background border-2 border-primary z-10 rounded-full px-6 py-2">
-                    <span className="text-xl font-bold">{year}</span>
-                  </div>
-                </div>
-
-                {/* Hackathons for this year */}
-                <div className="space-y-12">
-                  {hackathonsByYear[year].map((hackathon, index) => {
-                    const globalIndex = flattenedHackathons.findIndex(h => h === hackathon);
-                    const side = index % 2 === 0 ? 'left' : 'right';
-                    return (
-                      <div key={`${year}-${index}`} className="relative">
-                        {/* Timeline Point */}
-                        <div className="absolute left-1/2 transform -translate-x-1/2 flex items-center justify-center">
-                          <TimelinePoint 
-                            isActive={expandedIndex === globalIndex}
-                            onClick={() => setExpandedIndex(expandedIndex === globalIndex ? null : globalIndex)}
-                            id={`point-${year}-${index}`}
-                          />
-                        </div>
-
-                        {/* Card - alternating sides */}
-                        <div className={`flex ${side === 'left' ? 'justify-end' : 'justify-start'} relative`}>
-                          <div className={`w-1/2 ${side === 'left' ? 'pr-8' : 'pl-8'}`}>
-                            <HackathonCard
-                              hackathon={hackathon}
-                              isExpanded={expandedIndex === globalIndex}
-                              onToggle={() => setExpandedIndex(expandedIndex === globalIndex ? null : globalIndex)}
-                              side={side}
-                              isHighlighted={expandedIndex === globalIndex}
-                            />
-                          </div>
-                        </div>
-                      </div>
-                    );
-                  })}
+            <div className="mb-16">
+              {/* Year Marker */}
+              <div 
+                id={`year-marker-${activeYear}`} 
+                className="flex justify-center items-center relative mb-8"
+              >
+                <div className="absolute left-1/2 transform -translate-x-1/2 bg-background border-2 border-primary z-10 rounded-full px-6 py-2">
+                  <span className="text-xl font-bold">{activeYear}</span>
                 </div>
               </div>
-            ))}
+
+              {/* Hackathons for this year */}
+              <div className="space-y-12">
+                {flattenedHackathons.map((hackathon, index) => {
+                  const side = index % 2 === 0 ? 'left' : 'right';
+                  return (
+                    <div key={`${activeYear}-${index}`} className="relative">
+                      {/* Timeline Point */}
+                      <div className="absolute left-1/2 transform -translate-x-1/2 flex items-center justify-center">
+                        <TimelinePoint 
+                          isActive={expandedIndex === index}
+                          onClick={() => setExpandedIndex(expandedIndex === index ? null : index)}
+                          id={`point-${activeYear}-${index}`}
+                        />
+                      </div>
+
+                      {/* Card - alternating sides */}
+                      <div className={`flex ${side === 'left' ? 'justify-end' : 'justify-start'} relative`}>
+                        <div className={`w-1/2 ${side === 'left' ? 'pr-8' : 'pl-8'}`}>
+                          <HackathonCard
+                            hackathon={hackathon}
+                            isExpanded={expandedIndex === index}
+                            onToggle={() => setExpandedIndex(expandedIndex === index ? null : index)}
+                            side={side}
+                            isHighlighted={expandedIndex === index}
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
           </div>
 
           {/* Journey Start Marker */}
