@@ -288,6 +288,16 @@ const hackathons: Hackathon[] = [
     links: {
       github: "https://github.com/altf4-games/Hack8"
     }
+  },
+  {
+    name: "Forge the Future Game Jam by 8th Wall",
+    date: "6 May 2025 - 30 June 2025",
+    location: "Online (International)",
+    description:
+      "Created Hyperloop, an endless runner with a twist, during my internship at Vyuxr Immersive Studios Pvt Ltd. Instead of controlling the spaceship, players control the obstacles—changing the flow, speed, and shape of the challenge in real time. Won the 'Most Addictive Game' award.",
+    links: {
+      site: "https://www.8thwall.com/blog/post/192402948989/announcing-the-winners-forge-the-future-game-jam"
+    }
   }
 ];
 
