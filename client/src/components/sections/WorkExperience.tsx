@@ -18,9 +18,9 @@ export default function WorkExperience() {
               <div className="flex items-center justify-between">
                 <div>
                   <CardTitle className="group-hover:text-primary transition-colors">VyuXR Immersive Studios Pvt Ltd</CardTitle>
-                  <CardDescription>Game Development & XR Intern • May 2025 – Present<br />Mumbai, India</CardDescription>
+                  <CardDescription>Game Development & XR Intern • May 2025 – June 2025<br />Mumbai, India</CardDescription>
                 </div>
-                <Badge variant="secondary" className="group-hover:bg-primary/20">Current</Badge>
+                {/* <Badge variant="secondary" className="group-hover:bg-primary/20">Current</Badge> */}
               </div>
             </CardHeader>
             <CardContent>
@@ -38,7 +38,7 @@ export default function WorkExperience() {
                   <CardTitle className="group-hover:text-primary transition-colors">Team Vision: AR/VR Club</CardTitle>
                   <CardDescription>Tech Head • July 2024 - May 2025</CardDescription>
                 </div>
-                <Badge variant="secondary" className="group-hover:bg-primary/20">Current</Badge>
+                {/* <Badge variant="secondary" className="group-hover:bg-primary/20">Current</Badge> */}
               </div>
             </CardHeader>
             <CardContent>
