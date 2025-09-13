@@ -58,34 +58,34 @@ const HackathonCard: React.FC<HackathonCardProps> = ({
       initial={{ opacity: 0, x: side === 'left' ? -20 : 20 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.3 }}
-      className={`w-full ${side === 'left' ? 'pr-8' : 'pl-8'}`}
+      className={`w-full ${side === 'left' ? 'md:pr-8 pr-4' : 'md:pl-8 pl-4'}`}
     >
       <Card
         className={`bg-card/80 backdrop-blur-sm border-primary/20 hover:bg-card/90 transition-all duration-300 shadow-md ${
           isHighlighted ? 'ring-2 ring-primary ring-opacity-60' : ''
         }`}
       >
-        <CardHeader className="cursor-pointer relative" onClick={onToggle}>
+        <CardHeader className="cursor-pointer relative p-4 md:p-6" onClick={onToggle}>
           {hasAchievement && (
             <div className="absolute -top-2 -right-2 bg-amber-400/90 text-black p-1 rounded-full" title="Achievement">
-              <Award className="w-4 h-4" />
+              <Award className="w-3 h-3 md:w-4 md:h-4" />
             </div>
           )}
-          <div className="flex items-center justify-between">
-            <CardTitle className="text-xl font-bold">{hackathon.name}</CardTitle>
-            <motion.div animate={{ rotate: isExpanded ? 90 : 0 }} transition={{ duration: 0.2 }}>
-              <ChevronRight className="w-5 h-5 text-primary" />
+          <div className="flex items-start justify-between gap-2">
+            <CardTitle className="text-lg md:text-xl font-bold leading-tight">{hackathon.name}</CardTitle>
+            <motion.div animate={{ rotate: isExpanded ? 90 : 0 }} transition={{ duration: 0.2 }} className="flex-shrink-0">
+              <ChevronRight className="w-4 h-4 md:w-5 md:h-5 text-primary" />
             </motion.div>
           </div>
           {/* Replaced CardDescription with a div */}
-          <div className="space-y-2">
-            <div className="flex items-center gap-2">
-              <Calendar className="w-4 h-4 text-muted-foreground" />
-              <span className="text-sm">{hackathon.date}</span>
+          <div className="space-y-2 mt-2">
+            <div className="flex items-center gap-2 flex-wrap">
+              <Calendar className="w-3 h-3 md:w-4 md:h-4 text-muted-foreground flex-shrink-0" />
+              <span className="text-xs md:text-sm break-words">{hackathon.date}</span>
             </div>
-            <div className="flex items-center gap-2">
-              <MapPin className="w-4 h-4 text-muted-foreground" />
-              <Badge variant="secondary">{hackathon.location}</Badge>
+            <div className="flex items-center gap-2 flex-wrap">
+              <MapPin className="w-3 h-3 md:w-4 md:h-4 text-muted-foreground flex-shrink-0" />
+              <Badge variant="secondary" className="text-xs max-w-full truncate">{hackathon.location}</Badge>
             </div>
           </div>
         </CardHeader>
@@ -98,9 +98,9 @@ const HackathonCard: React.FC<HackathonCardProps> = ({
               exit={{ height: 0, opacity: 0 }}
               transition={{ duration: 0.3 }}
             >
-              <CardContent className="pb-4">
-                <p className="text-muted-foreground mb-4">{hackathon.description}</p>
-                <div className="flex flex-wrap gap-4">
+              <CardContent className="pb-4 px-4 md:px-6">
+                <p className="text-muted-foreground mb-4 text-sm md:text-base leading-relaxed">{hackathon.description}</p>
+                <div className="flex flex-wrap gap-2 md:gap-4">
                   {Object.entries(hackathon.links).map(([type, url]) =>
                     url ? (
                       <a
@@ -108,10 +108,11 @@ const HackathonCard: React.FC<HackathonCardProps> = ({
                         href={url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center gap-2 text-sm text-primary hover:text-primary/80 transition-colors bg-primary/10 px-3 py-1.5 rounded-full"
+                        className="flex items-center gap-2 text-xs md:text-sm text-primary hover:text-primary/80 transition-colors bg-primary/10 px-2 py-1 md:px-3 md:py-1.5 rounded-full"
                       >
                         <LinkIcon type={type as keyof Hackathon['links']} />
-                        {type.charAt(0).toUpperCase() + type.slice(1)}
+                        <span className="hidden sm:inline">{type.charAt(0).toUpperCase() + type.slice(1)}</span>
+                        <span className="sm:hidden">{type.charAt(0).toUpperCase()}</span>
                       </a>
                     ) : null
                   )}
@@ -298,7 +299,17 @@ const hackathons: Hackathon[] = [
     links: {
       site: "https://www.8thwall.com/blog/post/192402948989/announcing-the-winners-forge-the-future-game-jam"
     }
-  }
+  },
+  {
+    name: 'SIH 2025',
+    date: '1 Sept 2025',
+    description:
+      'Built Tour Raksha, a smart tourist safety and incident response system leveraging AI, geo-fencing, and blockchain-based digital IDs to ensure safer travel experiences.',
+    location: 'India',
+    links: {
+      github: 'https://github.com/altf4-games/Tour-Raksha',
+    },
+  },
 ];
 
 export default function Hackathons(): JSX.Element {
@@ -346,20 +357,20 @@ export default function Hackathons(): JSX.Element {
           className="mb-12"
         >
           <div className="flex flex-col items-center justify-center gap-2 mb-6">
-            <h2 className="text-4xl font-bold text-center">Hackathon Journey</h2>
-            <div className="h-1 w-24 bg-primary rounded-full mt-2"></div>
-            <p className="text-center text-muted-foreground mt-4 max-w-2xl">
+            <h2 className="text-3xl md:text-4xl font-bold text-center">Hackathon Journey</h2>
+            <div className="h-1 w-16 md:w-24 bg-primary rounded-full mt-2"></div>
+            <p className="text-center text-muted-foreground mt-4 max-w-2xl px-4 text-sm md:text-base">
               A chronological journey through my hackathon experiences, showcasing projects and achievements across various domains and technologies.
             </p>
           </div>
 
           {/* Year Selector */}
-          <div className="flex justify-center gap-4 mb-10 flex-wrap">
+          <div className="flex justify-center gap-2 md:gap-4 mb-8 md:mb-10 flex-wrap px-4">
             {years.map(year => (
               <button
                 key={year}
                 onClick={() => setActiveYear(year)}
-                className={`px-4 py-2 rounded-full transition-all ${
+                className={`px-3 py-2 md:px-4 md:py-2 text-sm md:text-base rounded-full transition-all ${
                   activeYear === year
                     ? 'bg-primary text-primary-foreground font-medium'
                     : 'bg-accent/50 hover:bg-accent text-foreground'
@@ -389,13 +400,13 @@ export default function Hackathons(): JSX.Element {
               </div>
 
               {/* Hackathons for this year */}
-              <div className="space-y-12">
+              <div className="space-y-8 md:space-y-12">
                 {flattenedHackathons.map((hackathon, index) => {
                   const side = index % 2 === 0 ? 'left' : 'right';
                   return (
                     <div key={`${activeYear}-${index}`} className="relative">
                       {/* Timeline Point */}
-                      <div className="absolute left-1/2 transform -translate-x-1/2 flex items-center justify-center">
+                      <div className="absolute left-1/2 transform -translate-x-1/2 flex items-center justify-center z-10">
                         <TimelinePoint 
                           isActive={expandedIndex === index}
                           onClick={() => setExpandedIndex(expandedIndex === index ? null : index)}
@@ -403,9 +414,9 @@ export default function Hackathons(): JSX.Element {
                         />
                       </div>
 
-                      {/* Card - alternating sides */}
-                      <div className={`flex ${side === 'left' ? 'justify-end' : 'justify-start'} relative`}>
-                        <div className={`w-1/2 ${side === 'left' ? 'pr-8' : 'pl-8'}`}>
+                      {/* Card - alternating sides on desktop, centered on mobile */}
+                      <div className={`flex ${side === 'left' ? 'md:justify-end justify-center' : 'md:justify-start justify-center'} relative`}>
+                        <div className={`w-full md:w-1/2 ${side === 'left' ? 'md:pr-8 px-4' : 'md:pl-8 px-4'} max-w-lg md:max-w-none`}>
                           <HackathonCard
                             hackathon={hackathon}
                             isExpanded={expandedIndex === index}
@@ -422,11 +433,13 @@ export default function Hackathons(): JSX.Element {
             </div>
           </div>
 
-          {/* Journey Start Marker */}
-          <div className="absolute left-1/2 bottom-0 transform -translate-x-1/2 -mb-8 flex flex-col items-center">
-            <div className="w-6 h-6 rounded-full bg-primary animate-pulse"></div>
-            <p className="mt-2 text-sm text-muted-foreground">Journey Begins</p>
-          </div>
+          {/* Journey Start Marker - only show for 2023 */}
+          {activeYear === '2023' && (
+            <div className="absolute left-1/2 bottom-0 transform -translate-x-1/2 -mb-8 flex flex-col items-center">
+              <div className="w-6 h-6 rounded-full bg-primary animate-pulse"></div>
+              <p className="mt-2 text-sm text-muted-foreground">Journey Begins</p>
+            </div>
+          )}
         </div>
       </div>
     </section>
