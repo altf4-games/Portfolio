@@ -310,6 +310,17 @@ const hackathons: Hackathon[] = [
       github: 'https://github.com/altf4-games/Tour-Raksha',
     },
   },
+  {
+    name: 'ETHGlobal New Delhi 2025',
+    date: '26 Sept 2025 - 28 Sept 2025',
+    description:
+      'Co-created Runft, a Web3 fitness platform that transforms every run into a unique generative NFT. The solution integrates Strava/GPS syncing to capture distance, route, and timestamp data, deterministic art generation to mint collectible assets, an NFT marketplace for trading runs, and on-chain provenance for verifiable digital history. Secured seamless login with MetaMask and deployed smart contracts on Arbitrum Sepolia.',
+    location: 'New Delhi',
+    links: {
+      github: 'https://github.com/altf4-games/RunFT',
+      site: 'https://runft.vercel.app/',
+    },
+  }
 ];
 
 export default function Hackathons(): JSX.Element {
