@@ -143,6 +143,17 @@ const TimelinePoint: React.FC<{ isActive: boolean; onClick: () => void; id: stri
 
 const hackathons: Hackathon[] = [
   {
+    name: 'Brackeys Game Jam 2023.2',
+    date: '20 Aug 2023 - 27 Aug 2023',
+    description:
+      'Developed The Outer Limits, a horror game inspired by Iron Lung and made in 7 days. Set in a future where the sun is dying and humanity has only days left, players take on the role of a lone explorer sent to investigate a mysterious Mass Relay discovered two years prior. Piloting a spacecraft through the outer reaches of space, the mission is to find a new home for humanity before time runs out. The game ranked #87 Overall, and placed #35 in Graphics, #43 in Innovation, and #83 in Audio.',
+    location: 'International (Online)',
+    links: {
+      github: 'https://github.com/altf4-games/The-Outer-Limits',
+      itch: 'https://altf4-games.itch.io/the-outer-limits',
+    },
+  },
+  {
     name: 'Winter MelonJam 2023 ❄️🍈',
     date: '28 Dec 2023 - 31 Dec 2023',
     description:
@@ -261,6 +272,17 @@ const hackathons: Hackathon[] = [
     },
   },
   {
+    name: 'Road To Game Jam',
+    date: '19 Dec 2024 - 17 Feb 2025',
+    description:
+      'Developed UNO Way Out, a unique survival card-based FPS where the player is trapped in a deadly UNO game against a rogue bot. Each card color grants powerful abilities: Blue for SMG, Red for rockets, Green for sniper, and Yellow for healing. The challenge lies in managing your hand—collecting more than 10 cards results in instant defeat. The battlefield collapses as you play, and victory can only be achieved by calling UNO or depleting the bot’s health. The game tied directly into the jam’s themes “Everything Falls Apart” and “Stuck Together.”',
+    location: 'India (Online)',
+    links: {
+      github: 'https://github.com/altf4-games/UnoWayOut',
+      itch: 'https://altf4-games.itch.io/uno-way-out',
+    },
+  },
+  {
     name: "Datathon 2025: AdFlow AI",
     date: "15 Feb 2025 - 16 Feb 2025",
     location: "KJSCE",
@@ -320,7 +342,31 @@ const hackathons: Hackathon[] = [
       github: 'https://github.com/altf4-games/RunFT',
       site: 'https://runft.vercel.app/',
     },
-  }
+  },
+  {
+    name: '💀 SCREAM JAM 2021 💀',
+    date: '14 Oct 2021 - 24 Oct 2021',
+    description:
+      'Developed The Night of \'87, a PS1-style horror game. Players take on the role of Robert Williams, who wakes up in a bathroom with no memory of recent events. As you explore, you must piece together what truly happened on the night of \'87. The story blurs the line between hero and villain—because waking up next to a dead body is very suspicious.',
+    location: 'International (Online)',
+    links: {
+      github: 'https://github.com/altf4-games/The-night-of-87',
+      itch: 'https://altf4-games.itch.io/the-night-of-87',
+    },
+  },
+  {
+    name: '💀 SCREAM JAM 2019 💀',
+    date: '11 Oct 2019 - 21 Oct 2019',
+    description:
+      'Developed Something In The Shadows, a short home invasion horror game and continuation of Midnight Nightmare. After moving to a secluded house in the forest, the protagonist discovers that Hunter, who was believed dead, has survived. Joined by Felix, they set a deadly trap to end you once and for all. The story challenges players to survive against relentless pursuers in a tense and isolated setting.',
+    location: 'International (nline)',
+    links: {
+      itch: 'https://altf4-games.itch.io/something-in-the-shadows',
+    },
+  },
+
+
+
 ];
 
 export default function Hackathons(): JSX.Element {
@@ -444,8 +490,8 @@ export default function Hackathons(): JSX.Element {
             </div>
           </div>
 
-          {/* Journey Start Marker - only show for 2023 */}
-          {activeYear === '2023' && (
+          {/* Journey Start Marker - only show for 2019 */}
+          {activeYear === '2019' && (
             <div className="absolute left-1/2 bottom-0 transform -translate-x-1/2 -mb-8 flex flex-col items-center">
               <div className="w-6 h-6 rounded-full bg-primary animate-pulse"></div>
               <p className="mt-2 text-sm text-muted-foreground">Journey Begins</p>
