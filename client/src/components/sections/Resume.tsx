@@ -83,7 +83,7 @@ export default function Resume() {
                 <div className="flex flex-col md:flex-row justify-between items-center gap-4">
                   <div className="text-center md:text-left">
                     <h3 className="text-xl font-bold mb-1">Professional Experience & Education</h3>
-                    <p className="text-muted-foreground text-sm">Updated February 2025</p>
+                    <p className="text-muted-foreground text-sm">Updated October 2025</p>
                   </div>
                   
                   <div className="flex gap-3">
